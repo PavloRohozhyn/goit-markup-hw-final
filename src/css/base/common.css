@@ -1,0 +1,64 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background: var(--color-white);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (min-width: 375px) {
+  .container {
+    max-width: 335px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 704px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+.valid {
+  border-color: var(--color-valid);
+}
+
+.invalid {
+  border-color: var(--color-invalid);
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(17, 21, 24, 0.3);
+  transition:
+    opacity var(--transition-dur-and-func),
+    visibility var(--transition-dur-and-func);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.backdrop-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all var(--transition-dur-and-func);
+}
